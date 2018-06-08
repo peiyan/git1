@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{#匹配宽高#}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{#    所有页面都继承它 先重置,然后link别的css #}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+
+{#  挖坑 #}
+    {% block  extCSS %}
+
+    {% endblock %}
+
+    <script src="{% static 'js/base.js' %}"></script>
+    <title>{% block title %}axf{% endblock %}</title>
+</head>
+<body>
+
+
+{% block header %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+{% block footer %}
+
+{% endblock %}
+{#先导jq #}
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/swiper.jquery.js' %}"></script>
+{#<script src="{% static 'js/base.js' %}"></script>#}
+
+{% block extJS %}
+
+{% endblock %}
+
+</body>
+</html>
